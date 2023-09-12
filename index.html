@@ -1,37 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="./style.css" />
-    <title>FakeOS</title>
-  </head>
-  <body>
-    <main class="desktop">
-      <span class="app" id="app1"></span>
-      <span class="app" id="app2"></span>
-      <span class="app" id="app3"></span>
-    </main>
-    <div class="startmenu">
-      <div class="startmenu__pfp">
-        <img src="./img/pfp.png" />
-        <h4>Anthony</h4>
-      </div>
-      <span class="startmenu__apps"></span>
-      <div class="startmenu__buttons">
-        <p>Turn Off Computer</p>
-        <img src="./img/turnoff.png" />
-        <p>Log Off</p>
-        <img src="./img/logoff.png" />
-      </div>
-    </div>
-    <nav class="taskbar">
-      <button class="taskbar__start">Start</button>
-      <span class="taskbar__app" id="taskbarApp1"></span>
-      <span class="taskbar__app" id="taskbarApp2"></span>
-      <span class="taskbar__app" id="taskbarApp3"></span>
-      <span class="taskbar__time" id="datetime"></span>
-    </nav>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="./script/script.js" defer></script>
+		<script src="./script/app1.js" defer></script>
+		<script src="./script/app2.js" defer></script>
+		<script src="./script/app3.js" defer></script>
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>FakeOS</title>
+	</head>
+	<body>
+		<div class="desktop">
+			<span class="app_icon" id="app1Icon"
+				><img class="app_icon__img" src="./img/icons/howmany.png" />
+				<p>Count how many</p></span
+			>
+			<span class="app_icon" id="app2Icon"
+				><img class="app_icon__img" src="./img/icons/captcha.png" />Text
+				Captcha</span
+			>
+			<span class="app_icon" id="app3Icon"
+				><img class="app_icon__img" src="./img/icons/reaction.png" />Reaction
+				Time</span
+			>
+			<div class="app hidden" id="app1">
+				<div class="app__bar">
+					<h4>How many pictures?</h4>
+					<div class="app__bar__exit" id="app1Exit"><p>X</p></div>
+				</div>
+				<div class="app1-grid">
+					<img class="app1-grid__img" id="captcha0" />
+					<img class="app1-grid__img" id="captcha1" />
+					<img class="app1-grid__img" id="captcha2" />
+					<img class="app1-grid__img" id="captcha3" />
+					<img class="app1-grid__img" id="captcha4" />
+					<img class="app1-grid__img" id="captcha5" />
+					<img class="app1-grid__img" id="captcha6" />
+					<img class="app1-grid__img" id="captcha7" />
+					<img class="app1-grid__img" id="captcha8" />
+				</div>
+				<h2 id="find"></h2>
+				<label for="submit1">How many?</label>
+				<input type="number" id="submit1" name="submit1" />
+				<button class="app1__reset">Reset</button>
+				<button class="app1__submit">Submit</button>
+				<p id="app1Answer">Please input number between 1-9!</p>
+			</div>
+			<div class="app hidden" id="app2">
+				<div class="app__bar">
+					<h4>Captcha Text</h4>
+					<div class="app__bar__exit" id="app2Exit"><p>X</p></div>
+				</div>
+				<div id="captchaText"></div>
+				<label for="submit2">Captcha</label>
+				<input type="text" id="submit2" name="submit2" />
+				<button class="app2__reset">Reset</button>
+				<button class="app2__submit">Submit</button>
+				<p id="app2Answer"></p>
+			</div>
+			<div class="app hidden" id="app3">
+				<div class="app__bar">
+					<h4>App3</h4>
+					<div class="app__bar__exit" id="app3Exit"><p>X</p></div>
+				</div>
+				<h2>Reaction Time</h2>
+				<div class="color-block"></div>
+				<p>Click to start. When the color is green click on color.</p>
+				<p id="reactionText"></p>
+			</div>
+		</div>
+		<div class="startmenu startmenu__hidden">
+			<div class="startmenu__pfp">
+				<img src="./img/pfp.png" />
+				<h4>Anthony</h4>
+			</div>
+			<span class="startmenu__apps"></span>
+			<div class="startmenu__buttons">
+				<p>Turn Off Computer</p>
+				<img src="./img/turnoff.png" />
+				<p>Log Off</p>
+				<img src="./img/logoff.png" />
+			</div>
+		</div>
+		<nav class="taskbar">
+			<button class="taskbar__start">Start</button>
+			<span class="taskbar__app" id="taskbarApp1"></span>
+			<span class="taskbar__app" id="taskbarApp2"></span>
+			<span class="taskbar__app" id="taskbarApp3"></span>
+			<span class="taskbar__time" id="datetime"></span>
+		</nav>
+	</body>
 </html>
