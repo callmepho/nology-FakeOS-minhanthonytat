@@ -1,6 +1,7 @@
 const captcha = document.getElementById("captchaText");
 const app2Answer = document.getElementById("app2Answer");
-function captchaReset2() {
+
+const captchaReset2 = () => {
 	let uniquechar = "";
 	app2Answer.innerHTML = "";
 	const randomchar =
@@ -9,9 +10,9 @@ function captchaReset2() {
 		uniquechar += randomchar.charAt(Math.random() * randomchar.length);
 	}
 	captcha.innerHTML = uniquechar;
-}
+};
 
-function submit2() {
+const submit2 = () => {
 	const submit = document.querySelector("#submit2").value;
 	if (submit == captcha.innerHTML) {
 		app2Answer.innerHTML = "Correct";
@@ -23,7 +24,7 @@ function submit2() {
 	}
 
 	document.querySelector("#submit2").value = "";
-}
+};
 captchaReset2();
 const app2Reset = document.querySelector(".app2__reset");
 const app2Submit = document.querySelector(".app2__submit");

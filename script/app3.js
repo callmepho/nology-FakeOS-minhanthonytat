@@ -8,7 +8,7 @@ let timer;
 const colorBlock = document.querySelector(".color-block");
 const reactionText = document.getElementById("reactionText");
 
-function start() {
+const start = () => {
 	if (!begin) {
 		startTime = new Date();
 		colorBlock.style.backgroundColor = "red";
@@ -17,14 +17,14 @@ function start() {
 		begin = true;
 		setTimeout(active, random * 1000);
 	}
-}
+};
 
-function active() {
+const active = () => {
 	colorBlock.style.backgroundColor = "green";
 	ready = true;
-}
+};
 
-function end() {
+const end = () => {
 	if (begin) {
 		colorBlock.style.backgroundColor = "grey";
 		endTime = new Date();
@@ -32,9 +32,9 @@ function end() {
 		begin = false;
 		reactionText.innerHTML = `Your reaction is ${reactionTime}s!`;
 	}
-}
+};
 
-function reaction() {
+const reaction = () => {
 	if (!begin) {
 		startTime = new Date();
 		colorBlock.style.backgroundColor = "red";
@@ -56,6 +56,6 @@ function reaction() {
 			Math.round(reactionTime * 100) / 100
 		}s!`;
 	}
-}
+};
 
 colorBlock.addEventListener("click", reaction);
