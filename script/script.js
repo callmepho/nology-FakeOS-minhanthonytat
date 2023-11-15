@@ -1,19 +1,18 @@
-var dt = new Date();
-
 const formatAMPM = (date) => {
-	var hours = date.getHours();
-	var minutes = date.getMinutes();
-	var ampm = hours >= 12 ? "pm" : "am";
-	hours = hours % 12;
-	hours = hours ? hours : 12; // the hour '0' should be '12'
-	minutes = minutes < 10 ? "0" + minutes : minutes;
-	var strTime = hours + ":" + minutes + " " + ampm;
-	return strTime;
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  var strTime = hours + ":" + minutes + " " + ampm;
+  return strTime;
 };
 
 const updateTime = () => {
-	document.getElementById("datetime").innerHTML = formatAMPM(dt);
-	setTimeout(updateTime, 1000);
+  var dt = new Date();
+  document.getElementById("datetime").innerHTML = formatAMPM(dt);
+  setTimeout(updateTime, 1000);
 };
 const startmenu = document.querySelector(".startmenu");
 const startbutton = document.querySelector(".taskbar__start");
@@ -28,38 +27,38 @@ const app2Exit = document.querySelector("#app2Exit");
 const app3Exit = document.querySelector("#app3Exit");
 
 const startMenuHide = () => {
-	console.log("click");
-	startmenu.classList.toggle("startmenu__hidden");
+  console.log("click");
+  startmenu.classList.toggle("startmenu__hidden");
 };
 
 const reveal1 = () => {
-	console.log("click");
-	app1.classList.remove("hidden");
+  console.log("click");
+  app1.classList.remove("hidden");
 };
 
 const reveal2 = () => {
-	console.log("click");
-	app2.classList.remove("hidden");
+  console.log("click");
+  app2.classList.remove("hidden");
 };
 
 const reveal3 = () => {
-	console.log("click");
-	app3.classList.remove("hidden");
+  console.log("click");
+  app3.classList.remove("hidden");
 };
 
 const hide1 = () => {
-	console.log("click");
-	app1.classList.add("hidden");
+  console.log("click");
+  app1.classList.add("hidden");
 };
 
 const hide2 = () => {
-	console.log("click");
-	app2.classList.add("hidden");
+  console.log("click");
+  app2.classList.add("hidden");
 };
 
 const hide3 = () => {
-	console.log("click");
-	app3.classList.add("hidden");
+  console.log("click");
+  app3.classList.add("hidden");
 };
 
 updateTime();
