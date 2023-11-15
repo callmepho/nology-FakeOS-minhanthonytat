@@ -1,5 +1,5 @@
 # nology-FakeOS-minhanthonytat
-
+![FakeOS](https://github.com/callmepho/nology-FakeOS-minhanthonytat/assets/47295382/5cd3df38-1aa0-43d8-9d89-854882b723ee)
 # Project: FakeOS
 
 ## Overview
